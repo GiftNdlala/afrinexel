@@ -223,6 +223,12 @@ const caseStudies = {
   },
 }
 
+export function generateStaticParams() {
+  return Object.keys(caseStudies).map((slug) => ({
+    slug: slug,
+  }))
+}
+
 export default function CaseStudyPage({ params }: { params: { slug: string } }) {
   const caseStudy = caseStudies[params.slug as keyof typeof caseStudies]
 
