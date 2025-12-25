@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 import Image from "next/image"
+import { withBase } from "@/lib/basePath"
 
 const footerLinks = {
   "Quick Links": ["Home", "Services", "Portfolio", "Blog", "Contact"],
@@ -31,7 +32,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <Image
-              src="/images/afrinexelbg.svg1.png"
+              src={withBase("/images/afrinexelbg.svg1.png")}
               alt="Afrinexel Logo"
               width={40}
               height={40}

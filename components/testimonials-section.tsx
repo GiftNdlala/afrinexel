@@ -6,6 +6,7 @@ import { useRef, useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
+import { withBase } from "@/lib/basePath"
 
 const testimonials = [
   {
@@ -15,7 +16,7 @@ const testimonials = [
     content:
       "Afrinexel Solutions transformed our digital presence completely. Their expertise in cloud solutions helped us scale our operations efficiently while reducing costs by 40%.",
     rating: 5,
-    avatar: "/professional-woman-ceo.png",
+    avatar: withBase("/professional-woman-ceo.png"),
   },
   {
     name: "Thabo dlamini",
@@ -24,7 +25,7 @@ const testimonials = [
     content:
       "The AI automation solutions they implemented streamlined our processes and improved our productivity by 60%. Their team is incredibly knowledgeable and professional.",
     rating: 5,
-    avatar: "/bhd.jpg",
+    avatar: withBase("/bhd.jpg"),
   },
   {
     name: "Ben zuko",
@@ -33,7 +34,7 @@ const testimonials = [
     content:
       "Working with Afrinexel was a game-changer. They delivered our mobile app ahead of schedule and exceeded all our expectations. The user experience is phenomenal.",
     rating: 5,
-    avatar: "/bhd2.jpg",
+    avatar: withBase("/bhd2.jpg"),
   },
   {
     name: "David Thompson",
@@ -42,7 +43,7 @@ const testimonials = [
     content:
       "Their full-stack development expertise helped us build a robust platform that handles millions of transactions daily. Exceptional quality and ongoing support.",
     rating: 5,
-    avatar: "/professional-founder-headshot.png",
+    avatar: withBase("/professional-founder-headshot.png"),
   },
 ]
 
@@ -136,7 +137,7 @@ export default function TestimonialsSection() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <img
-                      src={testimonials[currentIndex].avatar || "/placeholder.svg"}
+                      src={testimonials[currentIndex].avatar || withBase("/placeholder.svg")}
                       alt={testimonials[currentIndex].name}
                       className="w-12 h-12 rounded-full mr-4"
                     />

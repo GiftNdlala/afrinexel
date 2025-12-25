@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
+import { withBase } from "@/lib/basePath"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -34,7 +35,7 @@ export default function Navbar() {
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-2">
             <Image
-              src="/images/afrinexelbg.svg1.png"
+              src={withBase("/images/afrinexelbg.svg1.png")}
               alt="Afrinexel Logo"
               width={40}
               height={40}

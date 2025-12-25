@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ExternalLink } from "lucide-react"
 import Link from "next/link"
+import { withBase } from "@/lib/basePath"
 
 const projects = [
   {
@@ -14,7 +15,7 @@ const projects = [
     description:
       "Offers curated listings of luxury accommodations with real-time availability, secure booking, and seamless user experience powered by modern web technologies.",
     category: "Web",
-    image: "/makiserno.png",
+    image: withBase("/makiserno.png"),
     slug: "luxury-accommodation-platform",
   },
   {
@@ -22,35 +23,35 @@ const projects = [
     description:
       "A full-featured employee management platform powered by Appwrite for backend services and React for an intuitive user interface..",
     category: "Mobile",
-    image: "/healthcare-mobile-app.png",
+    image: withBase("/healthcare-mobile-app.png"),
     slug: "ems.png",
   },
   {
     title: "Cloud Infrastructure",
     description: "Scalable microservices architecture deployed on AWS with automated CI/CD pipelines.",
     category: "Cloud",
-    image: "/cloud-infrastructure-dashboard.png",
+    image: withBase("/cloud-infrastructure-dashboard.png"),
     slug: "cloud-infrastructure",
   },
   {
     title: "AI Analytics Dashboard",
     description: "Machine learning powered analytics platform with predictive insights and data visualization.",
     category: "AI",
-    image: "/ai-analytics-dashboard.png",
+    image: withBase("/ai-analytics-dashboard.png"),
     slug: "ai-analytics-dashboard",
   },
   {
     title: "Financial Trading App",
     description: "Real-time trading platform with advanced charting tools and portfolio management.",
     category: "Mobile",
-    image: "/placeholder-0dvpu.png",
+    image: withBase("/placeholder-0dvpu.png"),
     slug: "financial-trading-app",
   },
   {
     title: "SaaS Management Portal",
     description: "Multi-tenant SaaS platform with role-based access control and comprehensive admin tools.",
     category: "Web",
-    image: "/placeholder-dpazg.png",
+    image: withBase("/placeholder-dpazg.png"),
     slug: "saas-management-portal",
   },
 ]
@@ -120,7 +121,7 @@ export default function PortfolioSection() {
               <Card className="group overflow-hidden bg-card border-border hover:shadow-xl transition-all duration-300 hover:scale-105 card-glow-hover">
                 <div className="relative overflow-hidden">
                   <img
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image || withBase("/placeholder.svg")}
                     alt={project.title}
                     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                   />

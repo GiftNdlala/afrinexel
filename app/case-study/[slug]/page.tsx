@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, Tag, Users, Code2, CheckCircle2, ExternalLink } fr
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { withBase } from "@/lib/basePath"
 
 const caseStudies = {
   "luxury-accommodation-platform": {
@@ -11,7 +12,7 @@ const caseStudies = {
     client: "Premium Stays Inc.",
     duration: "4 months",
     team: "6 developers, 2 designers, 1 PM",
-    image: "/makiserno.png",
+    image: withBase("/makiserno.png"),
     overview:
       "We developed a comprehensive luxury accommodation platform that revolutionizes how high-end properties are discovered and booked. The platform features an intuitive interface, real-time availability tracking, and seamless payment processing.",
     challenge:
@@ -47,7 +48,7 @@ const caseStudies = {
     client: "TechCorp Solutions",
     duration: "3 months",
     team: "4 developers, 1 designer, 1 PM",
-    image: "/healthcare-mobile-app.png",
+    image: withBase("/healthcare-mobile-app.png"),
     overview:
       "A comprehensive employee management platform built with modern technologies to streamline HR operations, attendance tracking, performance reviews, and team collaboration. The system integrates seamlessly with existing corporate infrastructure.",
     challenge:
@@ -83,9 +84,10 @@ const caseStudies = {
     client: "Global Finance Corp",
     duration: "6 months",
     team: "8 engineers, 2 architects, 1 PM",
-    image: "/cloud-infrastructure-dashboard.png",
+    image: withBase("/cloud-infrastructure-dashboard.png"),
     overview:
       "A complete cloud transformation project migrating legacy on-premise infrastructure to a modern microservices architecture on AWS. The solution provides auto-scaling, high availability, and disaster recovery capabilities.",
+
     challenge:
       "The client's monolithic on-premise system was struggling with scaling issues, frequent downtime, and mounting maintenance costs. They needed zero-downtime migration while maintaining strict financial compliance and data security standards.",
     solution:
@@ -119,9 +121,10 @@ const caseStudies = {
     client: "DataDrive Analytics",
     duration: "5 months",
     team: "5 developers, 2 ML engineers, 1 designer",
-    image: "/ai-analytics-dashboard.png",
+    image: withBase("/ai-analytics-dashboard.png"),
     overview:
       "An intelligent analytics platform that uses machine learning to provide predictive insights, anomaly detection, and automated recommendations. The dashboard processes millions of data points to deliver actionable business intelligence.",
+
     challenge:
       "DataDrive needed a way to make sense of massive datasets from multiple sources while providing real-time predictions and insights. The solution had to be accessible to non-technical users while maintaining sophisticated analytical capabilities.",
     solution:
@@ -155,9 +158,10 @@ const caseStudies = {
     client: "TradeMax Financial",
     duration: "7 months",
     team: "6 developers, 2 designers, 1 QA, 1 PM",
-    image: "/placeholder-0dvpu.png",
+    image: withBase("/placeholder-0dvpu.png"),
     overview:
       "A sophisticated mobile trading platform enabling users to trade stocks, forex, and cryptocurrencies in real-time. Features advanced charting tools, portfolio management, and AI-powered trading suggestions with bank-level security.",
+
     challenge:
       "Building a mobile app that handles real-time market data streams, executes trades with sub-second latency, and maintains financial-grade security while providing an intuitive user experience was the primary challenge.",
     solution:
@@ -191,7 +195,7 @@ const caseStudies = {
     client: "CloudServe Technologies",
     duration: "5 months",
     team: "7 developers, 2 designers, 1 PM",
-    image: "/placeholder-dpazg.png",
+    image: withBase("/placeholder-dpazg.png"),
     overview:
       "A comprehensive SaaS platform enabling businesses to manage multiple client accounts with sophisticated role-based access control, billing automation, and white-label capabilities. The portal serves as the central hub for service delivery and customer management.",
     challenge:
